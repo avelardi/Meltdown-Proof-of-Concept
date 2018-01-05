@@ -6,7 +6,11 @@
 #include <string.h>
 #include <sys/syscall.h>
 
-void revengmeltdown(const char* target, const char* detector);
+void revengmeltdown(const char* target, const char* detector) {
+ /*
+Seemed like gcc optimized the declaration out  ¯\_(ツ)_/¯  this should do it I guess
+ */
+}
 uint64_t timed_read(const char* target);
 
 uint64_t baseline_timed(const char* target, int in_cache) {
